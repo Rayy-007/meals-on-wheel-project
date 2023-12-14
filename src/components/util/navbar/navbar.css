@@ -1,0 +1,16 @@
+nav {
+  padding: 20px;
+}
+
+.logo h3 {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.logo p {
+  font-size: 15px;
+}
+
+nav ul li {
+  padding: 10px;
+}

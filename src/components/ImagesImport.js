@@ -11,10 +11,11 @@ import Bird2 from "../assets/icons/bird-2.png";
 import DonateBox from "../assets/icons/donate-box.png";
 import DonateIcon from "../assets/icons/donate-icon.png";
 import Dot from "../assets/icons/dot.png";
-import Dot from "../assets/icons/dot.png";
 import GetMealIcon from "../assets/icons/get-meal-icon.png";
 import LongArrow from "../assets/icons/long-arrow.png";
 import FooterWave from "../assets/icons/wave.png";
+// Logo
+import Logo from "../assets/logo.png";
 
 export {
   HomeDonate,
@@ -31,4 +32,5 @@ export {
   GetMealIcon,
   LongArrow,
   FooterWave,
+  Logo,
 };

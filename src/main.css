@@ -3,19 +3,19 @@
 
 :root {
   /* Colors */
-  --bg-color: "#F8F8F8";
-  --primary-color: "#FF6347";
-  --secondary-color: "#4CAF50";
-  --third-color: "#FFA500";
+  --bg-color: #f8f8f8;
+  --primary-color: #ff6347;
+  --secondary-color: #4caf50;
+  --third-color: #ffa500;
 
   /* Btn colors */
-  --btn-primary-color: "#007BFF";
-  --btn-secondary-color: "#8A2BE2";
+  --btn-primary-color: #007bff;
+  --btn-secondary-color: #8a2be2;
 
   /* Text colors */
-  --text-primary-color: "#333333";
-  --text-secondary-color: "#555555";
-  --white-color: "#FFFFFF";
+  --text-primary-color: #333333;
+  --text-secondary-color: #555555;
+  --white-color: #ffffff;
 
   /* Font size */
   /* 24.00px → 38.00px */
@@ -62,8 +62,26 @@ body {
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   width: 100%;
+}
+
+.logo img {
+  width: 60px;
 }
 
 /* ================
@@ -110,16 +128,19 @@ p,
   border: 1px solid;
   border-radius: 10px;
   font-size: var(--normal-font);
+  transition: 0.3s;
 }
 
 /* Orange Button */
-.primary {
+.primary,
+.outline:hover {
   border-color: var(--primary-color);
   background-color: var(--primary-color);
   color: var(--white-color);
 }
 
-.outline {
+.outline,
+.primary:hover {
   border-color: var(--primary-color);
   background-color: transparent;
   color: var(--primary-color);

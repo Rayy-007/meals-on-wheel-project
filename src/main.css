@@ -50,7 +50,7 @@ html {
 
 body {
   scroll-behavior: smooth;
-  overflow-y: hidden;
+  overflow-x: hidden;
   color: var(--text-primary-color);
 }
 

@@ -1,0 +1,30 @@
+.about-con {
+  background-color: #4caf4f31;
+  padding: 3rem;
+}
+
+.about-first.flex {
+  gap: 3rem;
+}
+
+.about-first .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-first .box img {
+  width: 200px;
+}
+
+.about-first .box a {
+  color: var(--third-color);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.about-first .box a img {
+  width: 30px;
+}

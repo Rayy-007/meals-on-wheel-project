@@ -13,6 +13,10 @@ import Delivery from "./management/delivery/Delivery";
 import Feedback from "./management/feedback/Feedback";
 import FoodSafety from "./management/foodSafety/FoodSafety";
 
+// Utility Components
+import Navbar from "./util/navbar/Navbar";
+import Footer from "./util/footer/Footer";
+
 export {
   Home,
   Contact,
@@ -26,4 +30,6 @@ export {
   Delivery,
   Feedback,
   FoodSafety,
+  Navbar,
+  Footer,
 };

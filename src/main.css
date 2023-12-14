@@ -1,5 +1,5 @@
 /*  Inter Font */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500:600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   /* Colors */
@@ -46,10 +46,10 @@
 body,
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-  scroll-behavior: smooth;
   overflow-x: hidden;
   color: var(--text-primary-color);
 }
@@ -119,6 +119,7 @@ a,
   font-size: var(--normal-font);
   font-weight: 500;
   line-height: 110%;
+  color: var(--text-primary-color);
 }
 
 p,

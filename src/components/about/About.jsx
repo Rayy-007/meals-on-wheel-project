@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="about-con">
+    <div id="about" className="about-con">
       <section className="about-first flex container ">
         <div className="box">
           <img src={HomeDonate} alt="donate box" />

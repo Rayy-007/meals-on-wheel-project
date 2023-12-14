@@ -22,23 +22,18 @@ const Navbar = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : null)}
-            href="/"
+            to="/"
           >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink
-            style={({ isActive }) => (isActive ? activeStyle : null)}
-            href="#about"
-          >
-            About
-          </NavLink>
+          <a href="#about">About</a>
         </li>
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : null)}
-            href="/contact"
+            to="/contact"
           >
             Contact
           </NavLink>
@@ -46,7 +41,7 @@ const Navbar = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : null)}
-            href="/donate"
+            to="/donate"
           >
             Donate
           </NavLink>
@@ -54,7 +49,7 @@ const Navbar = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : null)}
-            href="/getmeal"
+            to="/getmeal"
           >
             Get Meal
           </NavLink>

@@ -15,3 +15,20 @@ import Dot from "../assets/icons/dot.png";
 import GetMealIcon from "../assets/icons/get-meal-icon.png";
 import LongArrow from "../assets/icons/long-arrow.png";
 import FooterWave from "../assets/icons/wave.png";
+
+export {
+  HomeDonate,
+  HomeGiveFood,
+  HomeVolunteer,
+  HomeBanner1,
+  HomeBanner2,
+  Arrow,
+  Bird1,
+  Bird2,
+  DonateBox,
+  DonateIcon,
+  Dot,
+  GetMealIcon,
+  LongArrow,
+  FooterWave,
+};

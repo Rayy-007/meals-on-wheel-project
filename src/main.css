@@ -1,0 +1,139 @@
+/*  Inter Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500:600;700;800;900&display=swap");
+
+:root {
+  /* Colors */
+  --bg-color: "#F8F8F8";
+  --primary-color: "#FF6347";
+  --secondary-color: "#4CAF50";
+  --third-color: "#FFA500";
+
+  /* Btn colors */
+  --btn-primary-color: "#007BFF";
+  --btn-secondary-color: "#8A2BE2";
+
+  /* Text colors */
+  --text-primary-color: "#333333";
+  --text-secondary-color: "#555555";
+  --white-color: "#FFFFFF";
+
+  /* Font size */
+  /* 24.00px → 38.00px */
+  --title-1: clamp(1.5rem, 1.1957rem + 1.5217vw, 2.375rem);
+  /* 20.00px → 32.00px */
+  --title-2: clamp(1.25rem, 0.9891rem + 1.3043vw, 2rem);
+  /* 18.00px → 28.00px */
+  --title-3: clamp(1.125rem, 0.9076rem + 1.087vw, 1.75rem);
+  /* 16.00px → 20.00px */
+  --normal-font: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  /* 14.00px → 18.00px */
+  --para-font: clamp(0.875rem, 0.788rem + 0.4348vw, 1.125rem);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+  font-size: 16px;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  color: var(--text-primary-color);
+}
+
+/* ====================
+    Container
+    =================== */
+.container {
+  width: min(85%, 1400px);
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* ================
+    Font 
+    =============== */
+h1 {
+  font-size: var(--title-1);
+  font-weight: 900;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: var(--title-2);
+  font-weight: 700;
+  line-height: 150%;
+}
+h3 {
+  font-size: var(--title-3);
+  font-weight: 600;
+  line-height: 150%;
+}
+
+a,
+.normal {
+  font-size: var(--normal-font);
+  font-weight: 500;
+  line-height: 110%;
+}
+
+p,
+.para-font {
+  font-size: var(--para-font);
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-secondary-color);
+}
+
+/* ================
+    Button 
+    =============== */
+.btn {
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: var(--normal-font);
+}
+
+/* Orange Button */
+.primary {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.outline {
+  border-color: var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+/* Violet button */
+.secondary {
+  border-color: var(--btn-secondary-color);
+  background-color: var(--btn-secondary-color);
+  color: var(--white-color);
+}
+
+.secondary-outline {
+  border-color: var(--btn-secondary-color);
+  background-color: transparent;
+  color: var(--white-color);
+}

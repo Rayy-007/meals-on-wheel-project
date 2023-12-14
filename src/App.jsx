@@ -1,10 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import { Contact, Home, Login, Register } from "./components/PagesImport";
 
 function App() {
   return (
-    <>
-      <h1>Hello Meals on Wheel</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,48 @@
+.home-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home.flex {
+  padding-top: 3rem;
+  justify-content: flex-start;
+  gap: calc(1rem);
+}
+
+.home .left {
+  width: 60%;
+}
+
+.home .left p {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.home .left .btn-container.flex {
+  margin-top: 30px;
+  justify-content: flex-start;
+}
+
+.home .right {
+  display: flex;
+}
+
+.right .first-img {
+  width: 300px;
+}
+
+.right .second-img {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  width: 300px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}

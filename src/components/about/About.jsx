@@ -67,7 +67,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="about-second about-third container flex">
+      <section className="about-third about-second container flex">
         <div className="about-right">
           <div className="about-title">
             <h2>How We Operate</h2>

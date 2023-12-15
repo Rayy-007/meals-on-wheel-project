@@ -6,6 +6,7 @@ import {
   HomeBanner2,
 } from "../ImagesImport";
 import About from "../about/About";
+import MealService from "./meal-service/MealService";
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
               <a href="/getmeal" className="flex btn primary ">
                 Get Meal <img src={GetMealIcon} alt="get meal icon" />
               </a>
-              <a href="/donate" className="flex btn violet ">
+              <a href="/donate" className="flex btn secondary ">
                 Donate <img src={DonateIcon} alt="donate icon" />
               </a>
             </div>
@@ -64,6 +65,7 @@ const Home = () => {
         </div>
       </div>
       <About />
+      <MealService />
     </>
   );
 };

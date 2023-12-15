@@ -130,6 +130,14 @@ p,
   color: var(--text-secondary-color);
 }
 
+.text-green {
+  color: var(--secondary-color);
+}
+
+.text-violet {
+  color: var(--btn-secondary-color);
+}
+
 /* ================
     Button 
     =============== */

@@ -31,6 +31,10 @@ import HotMeal3 from "../assets/meals/hot-meal-3.png";
 import FronzenMeal1 from "../assets/meals/frozen-meal-1.png";
 import FronzenMeal2 from "../assets/meals/frozen-meal-2.png";
 import FronzenMeal3 from "../assets/meals/frozen-meal-3.png";
+// People
+import BillGate from "../assets/people/bill-gate.png";
+import Jeff from "../assets/people/jeff.png";
+import Warren from "../assets/people/warren.png";
 
 export {
   HomeDonate,
@@ -61,4 +65,7 @@ export {
   FronzenMeal1,
   FronzenMeal2,
   FronzenMeal3,
+  Warren,
+  Jeff,
+  BillGate,
 };

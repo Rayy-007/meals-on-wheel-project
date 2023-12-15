@@ -7,6 +7,7 @@ import {
 } from "../ImagesImport";
 import About from "../about/About";
 import MealService from "./meal-service/MealService";
+import Testimonial from "./testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -66,6 +67,7 @@ const Home = () => {
       </div>
       <About />
       <MealService />
+      <Testimonial />
     </>
   );
 };

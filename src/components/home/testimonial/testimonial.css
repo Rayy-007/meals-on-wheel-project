@@ -1,0 +1,41 @@
+#testimonial {
+  padding: 6rem 0;
+}
+
+#testimonial .test-title {
+  display: flex;
+  gap: 15px;
+}
+
+#testimonial .test-title img {
+  width: 50px;
+}
+
+#testimonial .cards-con {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 6rem;
+}
+
+#testimonial .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgba(255, 165, 0, 20%);
+  border-radius: 10px;
+  width: 350px;
+  padding: 3rem;
+}
+
+#testimonial .card img {
+  position: absolute;
+  top: -40px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}

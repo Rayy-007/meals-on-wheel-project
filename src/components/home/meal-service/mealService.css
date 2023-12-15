@@ -1,0 +1,58 @@
+#mealService {
+  background-color: rgba(225, 99, 71, 15%);
+  padding: 3rem 0;
+}
+
+.hot-meal .left {
+  width: 60%;
+}
+
+.hot-meal .left h2 {
+  margin-bottom: 4rem;
+}
+
+.hot-meal .left .img-con {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-meal .left .img-con img:nth-child(1) {
+  width: 300px;
+  height: 220px;
+  align-self: flex-start;
+  margin-bottom: 2rem;
+}
+.hot-meal .left .img-con img:nth-child(2) {
+  align-self: center;
+  margin-bottom: -6rem;
+}
+.hot-meal .left .img-con img:nth-child(3) {
+  align-self: flex-end;
+}
+
+.hot-meal .left .img-con img {
+  width: 300px;
+}
+
+.hot-meal .right {
+  width: 40%;
+}
+
+.hot-meal .right h3 {
+  margin-bottom: 2rem;
+}
+
+.frozen-meal.hot-meal .left .img-con {
+  justify-content: flex-end;
+  gap: 3rem;
+}
+.frozen-meal.hot-meal .left .img-con .con {
+  display: flex;
+  flex-direction: column;
+}
+.frozen-meal.hot-meal .left .img-con .con img:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.longArrow {
+  height: 50px;
+}

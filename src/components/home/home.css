@@ -1,4 +1,4 @@
-.home-container {
+.home-con {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
 }
 
 .home .left {
-  width: 60%;
+  width: 56%;
 }
 
 .home .left p {
@@ -30,7 +30,7 @@
 }
 
 .right .first-img {
-  width: 300px;
+  width: 350px;
 }
 
 .right .second-img {

@@ -1,0 +1,42 @@
+.footer-con {
+  background-color: rgba(255, 99, 71, 80%);
+  padding: 8rem 0;
+}
+
+.footer-con a,
+.footer-con .quick-form p {
+  color: var(--white-color);
+}
+
+.footer-con .logo {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.footer-con ul {
+  text-align: center;
+}
+
+.footer-con ul li {
+  padding: 1rem;
+}
+
+.footer-con .quick-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.footer-con .quick-form p {
+  font-weight: 700;
+}
+
+.footer-con .quick-form input {
+  padding: 20px 15px;
+  border-radius: 10px;
+}
+
+.wave {
+  margin-bottom: -4px;
+}

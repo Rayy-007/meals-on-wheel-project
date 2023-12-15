@@ -1,21 +1,34 @@
-.about-con {
+/* ============================
+    First Section of about us
+    =========================== */
+.about-first {
   background-color: #4caf4f31;
-  padding: 3rem;
+  padding: 4rem;
+  margin-top: 5rem;
 }
 
-.about-first.flex {
+.about-first .flex {
+  height: 320px;
   gap: 3rem;
+  align-items: stretch;
 }
 
 .about-first .box {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.about-first .box h3 {
+  width: 250px;
 }
 
 .about-first .box img {
-  width: 200px;
+  width: 250px;
 }
 
 .about-first .box a {
@@ -27,4 +40,98 @@
 
 .about-first .box a img {
   width: 30px;
+}
+
+/* ============================
+    Second Section of about us
+    =========================== */
+.about-second {
+  padding: 6rem 0;
+}
+.about-second.flex {
+  justify-content: space-around;
+}
+
+.about-second .about-left {
+  width: 50%;
+}
+
+.about-second .about-left .about-title {
+  margin-bottom: 2rem;
+}
+
+.about-second .about-left .about-img {
+  height: 300px;
+  display: flex;
+  position: relative;
+}
+
+.about-second .about-left .about-img img {
+  width: 350px;
+}
+
+.about-second .about-left .about-img img:nth-child(1) {
+  align-self: flex-start;
+}
+
+.about-second .about-left .about-img img:nth-child(2) {
+  align-self: flex-end;
+  margin-left: -10%;
+}
+
+.about-second .long-arrow {
+  position: absolute;
+  bottom: -130px;
+  height: 280px;
+}
+
+.about-second .about-right {
+  width: 40%;
+}
+
+.line {
+  height: 2px;
+  width: 80%;
+  background-color: var(--third-color);
+  margin-bottom: 30px;
+}
+
+/* ============================
+    Third Section of about us
+    =========================== */
+.about-third .about-title h2 {
+  margin-bottom: 2rem;
+}
+
+.about-third .about-right p {
+  margin-bottom: 2rem;
+}
+
+.about-third .about-left .about-img {
+  height: 400px;
+}
+
+.about-third .about-left .about-img img:nth-child(1) {
+  z-index: 88;
+}
+.about-third .about-left .about-img img:nth-child(2) {
+  align-self: flex-end;
+  margin-left: -5%;
+}
+
+.about-third .bird {
+  position: absolute;
+  height: 40px;
+  max-width: 40px;
+}
+
+.about-third .bird.bird1 {
+  right: 20%;
+  top: 0;
+  height: 70px;
+  max-width: 70px;
+}
+.about-third .bird.bird2 {
+  left: 0;
+  bottom: 20%;
 }

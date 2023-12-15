@@ -130,6 +130,14 @@ p,
   color: var(--text-secondary-color);
 }
 
+.text-green {
+  color: var(--secondary-color);
+}
+
+.text-violet {
+  color: var(--btn-secondary-color);
+}
+
 /* ================
     Button 
     =============== */
@@ -139,6 +147,15 @@ p,
   border-radius: 10px;
   font-size: var(--normal-font);
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-flex {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 15px;
 }
 
 /* Orange Button */
@@ -159,9 +176,15 @@ p,
   color: var(--primary-color);
 }
 
-.violet {
+/* .violet {
   background-color: var(--btn-secondary-color);
   border-color: var(--btn-secondary-color);
+  color: var(--white-color);
+} */
+
+.green {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
   color: var(--white-color);
 }
 

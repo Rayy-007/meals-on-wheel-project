@@ -147,6 +147,7 @@ p,
   border-radius: 10px;
   font-size: var(--normal-font);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn-flex {

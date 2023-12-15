@@ -10,7 +10,7 @@ import About from "../about/About";
 const Home = () => {
   return (
     <>
-      <div className="home-container container">
+      <div className="home-con container">
         <section className="home flex">
           <div className="left intro">
             <div className="text">

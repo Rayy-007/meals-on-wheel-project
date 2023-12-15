@@ -16,6 +16,14 @@ import LongArrow from "../assets/icons/long-arrow.png";
 import FooterWave from "../assets/icons/wave.png";
 // Logo
 import Logo from "../assets/logo.png";
+// About
+import VolunteerGirl from "../assets/volunteers/volunteer-give-food-girl.png";
+import GetFoodMan from "../assets/volunteers/get-food-man.png";
+import Team1 from "../assets/volunteers/perform-team.png";
+import Team2 from "../assets/volunteers/prepare-donation.png";
+import Team3 from "../assets/volunteers/volunteers.png";
+import LoginImage from "../assets/volunteers/login.png";
+import RegisterImage from "../assets/volunteers/register.png";
 
 export {
   HomeDonate,
@@ -33,4 +41,11 @@ export {
   LongArrow,
   FooterWave,
   Logo,
+  VolunteerGirl,
+  GetFoodMan,
+  Team1,
+  Team2,
+  Team3,
+  LoginImage,
+  RegisterImage,
 };

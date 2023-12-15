@@ -141,6 +141,14 @@ p,
   transition: 0.3s;
 }
 
+.btn-flex {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 15px;
+}
+
 /* Orange Button */
 .primary,
 .outline:hover {
@@ -159,9 +167,15 @@ p,
   color: var(--primary-color);
 }
 
-.violet {
+/* .violet {
   background-color: var(--btn-secondary-color);
   border-color: var(--btn-secondary-color);
+  color: var(--white-color);
+} */
+
+.green {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
   color: var(--white-color);
 }
 

@@ -1,6 +1,7 @@
 import Home from "./home/Home";
 import Contact from "./contact/Contact";
 import Login from "./login/Login";
+//below are register pages;
 import Register from "./register/Register";
 // Below pages only can accessable after login
 import Meals from "./users/meals/Meals";

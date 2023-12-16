@@ -1,0 +1,99 @@
+
+  textarea {
+    border-color: #eee;
+    border-width: 1px;
+  }
+  label, textarea, input {
+    width: 100%;
+    display: block;
+  }
+textarea{
+    
+    border-style: solid;
+    border-color: hsl(270, 75%, 50%);
+    border-width: 3px;
+    border-radius: 5px;
+    height: 65px;
+  }
+input {
+    border-style: solid;
+    border-color: hsl(270, 75%, 50%);
+    border-width: 3px;
+    border-radius: 5px;
+    height: 35px;
+  }
+
+  .member-text{
+    color: hsl(270, 75%, 50%);
+  }
+  .btn-register{
+    padding: 10px 10px 35px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: var(--normal-font);
+    transition: 0.3s;
+  }
+  .register-photo{
+    width: 600px;
+    height: 1000px;
+    border: 1px;
+    border-radius: 20px;
+  }
+  .background-div{
+   background-color: hsla(270, 69%, 57%, 0.451);
+   
+   border-radius: 10px;
+  }
+.btn-regPartner{
+  background-color: #000000; 
+border: none;
+color: white;
+
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 25px;
+padding: 6px 90px 15px;
+border-width: 3px;
+border-radius: 20px;
+}
+.btn-regVolun{
+  background-color: #049b34; 
+  border: none;
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  padding: 6px 75px 15px;
+  border-width: 3px;
+border-radius: 20px;
+}
+.btn-regCareGiver{
+  background-color: #f8590af6; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  padding: 6px 75px 15px;
+  border-width: 3px;
+border-radius: 20px;
+}
+.btn-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 40px 50px 40px;
+}
+.logo-reg-btn{
+  width: 40px;
+  height: 40px;
+}
+.reg-C{
+  width: 400px;
+  height: 600px;
+}

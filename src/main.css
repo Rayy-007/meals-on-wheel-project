@@ -162,6 +162,35 @@ p,
   gap: 15px;
 }
 
+/* ==========================
+    Input Styling
+    ======================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+input,
+textarea {
+  padding: 1.4rem;
+  border-radius: 10px;
+  border: 3px solid var(--primary-color);
+  font-size: 18px;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
 /* Orange Button */
 .primary,
 .outline:hover {

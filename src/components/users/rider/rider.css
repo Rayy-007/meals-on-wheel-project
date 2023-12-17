@@ -1,0 +1,27 @@
+.table-schedule {
+    border: 2px solid #92370af6;
+    width: 800px;
+    height: 200px;
+}
+ 
+.th-shcedule {
+    border: 1px solid #a73f0bf6;
+
+}
+ 
+.td-schedule {
+    border: 1px solid #7d2f08f6;
+    text-align: center;
+}
+.recently-Delivered-lists{
+    border: 2px solid rgb(143, 103, 103);
+    width: auto;
+    height: auto;
+}
+.vl{
+    border-left: 2px solid #a74514f6;
+    height: 300px;
+}
+.status{
+    color : rgb(33, 176, 40);
+}

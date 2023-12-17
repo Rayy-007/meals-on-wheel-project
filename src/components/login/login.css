@@ -1,40 +1,14 @@
-.contact-container {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .contact .flex {
-    padding-top: 5rem;
-    justify-content: flex-start;
-    gap: calc(1rem);
-  }
-  
-  .contact .left {
-     width: 65%;
-     margin-left: 10%;
-  }
-  
-  .left .input-form{
-      margin-top: 25px;
-  }
-  
-  .left .input-form .NameInputBox{
-      width: 70%;
-      padding: 10px;
-      border: 3px solid #ff6347;
-      border-radius: 10px;
-      margin-bottom: 20px;
-  }
-  
-  .right{
-      margin-top: 45px;
-      margin-right: 12%;
-  }
+.login-con {
+  height: 80vh;
+  padding-left: 3rem;
+}
 
-  .login-btn{
-    cursor: pointer;
-    margin-left: 16%;
-    width: 35%;
-  }
+.login-con .login-form {
+  width: 40%;
+}
+
+.login-con img {
+  position: absolute;
+  right: 0;
+  width: 600px;
+}

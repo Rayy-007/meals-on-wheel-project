@@ -1,0 +1,50 @@
+.feedback-con.flex {
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.feedbacks {
+  margin-top: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(76, 175, 80, 20%);
+  border-radius: 10px;
+  padding: 1rem 3rem;
+}
+
+.feedback {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.feedback img {
+  width: 80px;
+  height: 80px;
+}
+
+.feedback .text {
+  width: 420px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.feedback .text p {
+  margin-top: 1rem;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  padding: 1rem;
+  font-size: 18px;
+  border-color: var(--secondary-color);
+}

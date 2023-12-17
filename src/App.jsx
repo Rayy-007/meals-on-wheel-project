@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import {
   Caregiver,
   Contact,
+  Feedback,
   FoodSafety,
   Home,
   Login,
@@ -29,6 +30,7 @@ function App() {
           <Route path="/registerC" element={<RegisterCareGiver />} />
           {/* Management Pages */}
           <Route path="/safety" element={<FoodSafety />} />
+          <Route path="/feedback" element={<Feedback />} />
 
           {/* User Roles */}
           <Route path="/user">

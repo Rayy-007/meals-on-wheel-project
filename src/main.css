@@ -130,6 +130,10 @@ p,
   color: var(--text-secondary-color);
 }
 
+.text-orange {
+  color: var(--primary-color);
+}
+
 .text-green {
   color: var(--secondary-color);
 }

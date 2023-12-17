@@ -39,6 +39,15 @@ import hotMeal1 from "../assets/meals/hot-meal-1.png";
 import hotMeal3 from "../assets/meals/hot-meal-3.png";
 import frozen1 from "../assets/meals/frozen-meal-1.png";
 import volunteerPhoto1 from "../assets/volunteers/volunteer-give-food-girl.png";
+// Food Safety Management
+import Safety1 from "../assets/safety/safety-1.png";
+import Safety2 from "../assets/safety/safety-2.png";
+import Certificate from "../assets/safety/certificate.png";
+
+// Old People
+import OldMan1 from "../assets/people/old-man-1.jpg";
+import Woman1 from "../assets/people/old-woman-1.jpg";
+import Woman2 from "../assets/people/old-woman-2.jpg";
 
 export {
   HomeDonate,
@@ -76,4 +85,10 @@ export {
   hotMeal3,
   frozen1,
   volunteerPhoto1,
+  Safety1,
+  Safety2,
+  Certificate,
+  OldMan1,
+  Woman1,
+  Woman2,
 };

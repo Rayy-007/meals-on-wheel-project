@@ -1,6 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import { Contact, Home, Login, Register } from "./components/PagesImport";
+import {
+  Contact,
+  FoodSafety,
+  Home,
+  Login,
+  Register,
+} from "./components/PagesImport";
 import "./main.css";
 import RegisterPartner from "./components/register/RegisterPartner";
 import RegisterVolunteer from "./components/register/RegisterVolunteer";
@@ -14,9 +20,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/registerP" element={<RegisterPartner/>} />
-          <Route path="/registerV" element={<RegisterVolunteer/>} />
-          <Route path="/registerC" element={<RegisterCareGiver/>} />
+          <Route path="/registerP" element={<RegisterPartner />} />
+          <Route path="/registerV" element={<RegisterVolunteer />} />
+          <Route path="/registerC" element={<RegisterCareGiver />} />
+          {/* Management Pages */}
+          <Route path="/safety" element={<FoodSafety />} />
         </Route>
       </Routes>
     </BrowserRouter>

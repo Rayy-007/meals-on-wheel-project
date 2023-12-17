@@ -54,9 +54,20 @@ const Navbar = () => {
             Get Meal
           </NavLink>
         </li>
+        <li className="dropdown">
+          <a>Services</a>
+          <ul className="dropdown-content">
+            <li>
+              <NavLink to="/safety">Safety Management</NavLink>
+            </li>
+            <li>
+              <NavLink to="/service2">Service 2</NavLink>
+            </li>
+          </ul>
+        </li>
       </ul>
 
-      <div className="btn-container flex">
+      <div className=" flex">
         <a className="btn primary" href="/login">
           Login
         </a>

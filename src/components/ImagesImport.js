@@ -14,6 +14,7 @@ import Dot from "../assets/icons/dot.png";
 import GetMealIcon from "../assets/icons/get-meal-icon.png";
 import LongArrow from "../assets/icons/long-arrow.png";
 import FooterWave from "../assets/icons/wave.png";
+import SendArrow from "../assets/icons/send-arrow.png";
 // Logo
 import Logo from "../assets/logo.png";
 // About
@@ -91,4 +92,5 @@ export {
   OldMan1,
   Woman1,
   Woman2,
+  SendArrow,
 };

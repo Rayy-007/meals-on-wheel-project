@@ -1,26 +1,37 @@
 import "./contact.css";
-import { HomeBanner2 } from "../ImagesImport";
+import { Team3, SendArrow } from "../ImagesImport";
 
 const Contact = () => {
   return (
     <>
       <div className="contact-container container">
+        <div className="send-arrow">
+          <img src={SendArrow} alt="" />
+        </div>
         <section className="flex contact">
           <div className="left">
-            
-              <h3>Get In Touch With Us</h3>
-            
-            <div className="input-form">
-              <input type="text" placeholder="Name" className="NameInputBox"/><br/>
-              <input type="text" placeholder="email" className="NameInputBox"/><br/>
-              <textarea type="text" placeholder="Message" className="NameInputBox"/><br/>
-            </div>
-            <button className="btn primary contact-btn">Send</button>
+            <h3>Get In Touch With Us</h3>
+
+            <form className="input-form">
+              <input type="text" placeholder="Name" className="NameInputBox" />
+              <input
+                type="email"
+                placeholder="email"
+                className="NameInputBox"
+              />
+              <textarea
+                placeholder="Message"
+                className="NameInputBox"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </form>
+            <button className="btn primary">Send</button>
           </div>
           <div className="right">
-            <img src={HomeBanner2} alt="Contact Image" />
+            <img src={Team3} alt="Contact Image" />
           </div>
-        </section> 
+        </section>
       </div>
     </>
   );

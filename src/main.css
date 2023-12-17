@@ -184,6 +184,7 @@ textarea {
 
 textarea {
   resize: vertical;
+  height: 200px;
 }
 
 form button {

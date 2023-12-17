@@ -35,7 +35,7 @@ function App() {
             <Route path="volunteer" element={<Volunteer />} />
             <Route path="caregiver" element={<Caregiver />} />
             <Route path="rider" element={<Rider />} />
-            <Route path=" meals" element={<Meals />} />
+            <Route path="meals" element={<Meals />} />
           </Route>
         </Route>
       </Routes>

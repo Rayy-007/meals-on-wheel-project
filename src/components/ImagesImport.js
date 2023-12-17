@@ -44,6 +44,11 @@ import Safety1 from "../assets/safety/safety-1.png";
 import Safety2 from "../assets/safety/safety-2.png";
 import Certificate from "../assets/safety/certificate.png";
 
+// Old People
+import OldMan1 from "../assets/people/old-man-1.jpg";
+import Woman1 from "../assets/people/old-woman-1.jpg";
+import Woman2 from "../assets/people/old-woman-2.jpg";
+
 export {
   HomeDonate,
   HomeGiveFood,
@@ -83,4 +88,7 @@ export {
   Safety1,
   Safety2,
   Certificate,
+  OldMan1,
+  Woman1,
+  Woman2,
 };

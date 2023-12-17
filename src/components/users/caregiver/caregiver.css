@@ -1,0 +1,43 @@
+.cargiver-con.flex {
+  padding: 4rem 0;
+  flex-wrap: wrap;
+  row-gap: 4rem;
+}
+
+.caregiver {
+  width: 630px;
+  background-color: rgba(255, 165, 0, 30%);
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.caregiver .img {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  text-align: center;
+}
+
+.caregiver img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.caregiver ul {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}

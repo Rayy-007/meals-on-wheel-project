@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import {
+  Caregiver,
   Contact,
   FoodSafety,
   Home,
   Login,
+  Meals,
   Register,
+  Rider,
+  Volunteer,
 } from "./components/PagesImport";
 import "./main.css";
 import RegisterPartner from "./components/register/RegisterPartner";
@@ -25,6 +29,14 @@ function App() {
           <Route path="/registerC" element={<RegisterCareGiver />} />
           {/* Management Pages */}
           <Route path="/safety" element={<FoodSafety />} />
+
+          {/* User Roles */}
+          <Route path="/user">
+            <Route path="volunteer" element={<Volunteer />} />
+            <Route path="caregiver" element={<Caregiver />} />
+            <Route path="rider" element={<Rider />} />
+            <Route path=" meals" element={<Meals />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

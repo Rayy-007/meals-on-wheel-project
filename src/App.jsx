@@ -11,6 +11,7 @@ import {
   Register,
   Rider,
   Volunteer,
+  Delivery,
 } from "./components/PagesImport";
 import "./main.css";
 import RegisterPartner from "./components/register/RegisterPartner";
@@ -31,6 +32,7 @@ function App() {
           {/* Management Pages */}
           <Route path="/safety" element={<FoodSafety />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/deliveryMang" element={<Delivery />} />
 
           {/* User Roles */}
           <Route path="/user">

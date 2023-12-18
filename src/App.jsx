@@ -12,11 +12,18 @@ import {
   Rider,
   Volunteer,
   Delivery,
+  Admin,
 } from "./components/PagesImport";
 import "./main.css";
 import RegisterPartner from "./components/register/RegisterPartner";
 import RegisterVolunteer from "./components/register/RegisterVolunteer";
 import RegisterCareGiver from "./components/register/RegisterCareGiver";
+import Members from "./components/management/admin/Members";
+import Parners from "./components/management/admin/Parners";
+import Dontators from "./components/management/admin/Dontators";
+import Caregivers from "./components/management/admin/Caregivers";
+import Volunteers from "./components/management/admin/Volunteers";
+import Riders from "./components/management/admin/Riders";
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +40,14 @@ function App() {
           <Route path="/safety" element={<FoodSafety />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/deliveryMang" element={<Delivery />} />
+          <Route path="admin" element={<Admin />} >
+            <Route path="member" element={<Members />} />
+            <Route path="caregiver" element={<Caregivers />} />
+            <Route path="volunteer" element={<Volunteers />} />
+            <Route path="partner" element={<Parners />} />
+            <Route path="donator" element={<Dontators />} />
+            <Route path="rider" element = {<Riders />} />
+          </Route>
 
           {/* User Roles */}
           <Route path="/user">

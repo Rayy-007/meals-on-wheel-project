@@ -18,25 +18,37 @@ import "./main.css";
 import RegisterPartner from "./components/register/RegisterPartner";
 import RegisterVolunteer from "./components/register/RegisterVolunteer";
 import RegisterCareGiver from "./components/register/RegisterCareGiver";
+
+import RegisterMember from "./components/register/RegisterMember";
+
+
 import Members from "./components/management/admin/Members";
 import Parners from "./components/management/admin/Parners";
 import Dontators from "./components/management/admin/Dontators";
 import Caregivers from "./components/management/admin/Caregivers";
 import Volunteers from "./components/management/admin/Volunteers";
 import Riders from "./components/management/admin/Riders";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/registerP" element={<RegisterPartner />} />
-          <Route path="/registerV" element={<RegisterVolunteer />} />
-          <Route path="/registerC" element={<RegisterCareGiver />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />}>
+            <Route index element={<RegisterMember />} />
+            <Route path="registerP" element={<RegisterPartner />} />
+            <Route path="registerV" element={<RegisterVolunteer />} />
+            <Route path="registerC" element={<RegisterCareGiver />} />
+          </Route>
           {/* Management Pages */}
+
+          <Route path="safety" element={<FoodSafety />} />
+          <Route path="feedback" element={<Feedback />} />
+          <Route path="deliveryMang" element={<Delivery />} />
+
           <Route path="/safety" element={<FoodSafety />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/deliveryMang" element={<Delivery />} />
@@ -50,7 +62,7 @@ function App() {
           </Route>
 
           {/* User Roles */}
-          <Route path="/user">
+          <Route path="user">
             <Route path="volunteer" element={<Volunteer />} />
             <Route path="caregiver" element={<Caregiver />} />
             <Route path="rider" element={<Rider />} />

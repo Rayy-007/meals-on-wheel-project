@@ -17,7 +17,7 @@ const Home = () => {
           <div className="left intro">
             <div className="text">
               <h1>
-                Delivering <span>Nourishment</span>, Bringing{" "}
+                Delivering <span>Nourishment</span>, Bringing
                 <span>smiles</span>
               </h1>
               <p>
@@ -28,7 +28,7 @@ const Home = () => {
                 illness, or disability, we're here to provide a helping hand.
               </p>
             </div>
-            <div className="btn-container flex">
+            <div className="btn-con flex">
               <a href="/getmeal" className="flex btn primary ">
                 Get Meal <img src={GetMealIcon} alt="get meal icon" />
               </a>

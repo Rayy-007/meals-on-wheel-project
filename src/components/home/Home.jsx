@@ -8,6 +8,7 @@ import {
 import About from "../about/About";
 import MealService from "./meal-service/MealService";
 import Testimonial from "./testimonial/Testimonial";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -29,12 +30,12 @@ const Home = () => {
               </p>
             </div>
             <div className="btn-con flex">
-              <a href="/getmeal" className="flex btn primary ">
+              <NavLink to="/register" className="flex btn primary ">
                 Get Meal <img src={GetMealIcon} alt="get meal icon" />
-              </a>
-              <a href="/donate" className="flex btn secondary ">
+              </NavLink>
+              <NavLink to="/donate" className="flex btn secondary ">
                 Donate <img src={DonateIcon} alt="donate icon" />
-              </a>
+              </NavLink>
             </div>
           </div>
           <div className="right">

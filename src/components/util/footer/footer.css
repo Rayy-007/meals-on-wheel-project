@@ -38,5 +38,27 @@
 }
 
 .wave {
-  margin-bottom: -4px;
+  position: relative;
+  /* margin-bottom: -4px; */
+}
+
+.custom-shape-divider-top-1702883696 {
+  z-index: 88;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1702883696 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1702883696 .shape-fill {
+  fill: #ffffff5d;
 }

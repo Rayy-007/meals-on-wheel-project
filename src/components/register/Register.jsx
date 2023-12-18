@@ -23,11 +23,13 @@ const Register = () => {
       <section className="flex">
         <div className="register-form">
           {loading ? (
-            <div class="lds-ellipsis">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div className="loading">
+              <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
           ) : (
             <Outlet />
@@ -37,19 +39,21 @@ const Register = () => {
           <div className="orLine">Or</div>
           <br />
           {loading ? (
-            <div class="lds-ellipsis">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div className="loading">
+              <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
           ) : (
             <div className="background-div">
               <div className="btn-container">
                 <NavLink
                   onClick={changeLoading}
-                  className="btn btn-flex black"
-                  to="registerP"
+                  className="btn btn-flex secondary"
+                  to="./"
                 >
                   Join As Member
                   <img className="logo-reg-btn" src={GetMealIcon} />
@@ -88,16 +92,7 @@ const Register = () => {
             </div>
           )}
         </div>
-        {loading ? (
-          <div class="lds-ellipsis">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        ) : (
-          <img className="register-photo" src={RegisterImage} />
-        )}
+        <img className="register-photo" src={RegisterImage} />
       </section>
     </div>
   );

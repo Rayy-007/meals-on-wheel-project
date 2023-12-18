@@ -24,21 +24,21 @@ const About = () => {
           <div className="box">
             <img src={HomeDonate} alt="donate box" />
             <h3>We received Donation</h3>
-            <NavLink>
+            <NavLink to="/donate">
               Donate <img src={Arrow} alt="arrow" />
             </NavLink>
           </div>
           <div className="box">
             <img src={HomeVolunteer} alt="volunteer box" />
             <h3>We Prepare Meal for people</h3>
-            <NavLink>
+            <NavLink to="/register/volunteer">
               Join with us <img src={Arrow} alt="arrow" />
             </NavLink>
           </div>
           <div className="box">
             <img src={HomeGiveFood} alt="give meal box" />
             <h3>We deliver People</h3>
-            <NavLink>
+            <NavLink to="register">
               Get Meals <img src={Arrow} alt="arrow" />
             </NavLink>
           </div>
@@ -86,10 +86,13 @@ const About = () => {
             Join us in this heartwarming journey. Together, we can make a
             difference, one meal at a time.
           </p>
-          <a className="btn primary green btn-flex" href="/volunteer">
+          <NavLink
+            className="btn primary green btn-flex"
+            to="register/volunteer"
+          >
             Become A Volunteer
             <img src={Arrow} alt="Arrow" />
-          </a>
+          </NavLink>
         </div>
         <div className="about-left">
           <div className="about-img">

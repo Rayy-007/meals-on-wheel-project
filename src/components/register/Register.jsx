@@ -61,7 +61,7 @@ const Register = () => {
                 <NavLink
                   onClick={changeLoading}
                   className="btn btn-flex black"
-                  to="registerP"
+                  to="partner"
                 >
                   Join As Partner
                   <img className="logo-reg-btn" src={PartnerIcon} />
@@ -69,7 +69,7 @@ const Register = () => {
                 <NavLink
                   onClick={changeLoading}
                   className="btn btn-flex green"
-                  to="registerV"
+                  to="volunteer"
                 >
                   Join As Volunteer
                   <img className="logo-reg-btn" src={DonateIcon} />
@@ -77,7 +77,7 @@ const Register = () => {
                 <NavLink
                   onClick={changeLoading}
                   className="btn btn-flex primary"
-                  to="registerC"
+                  to="caregiver"
                 >
                   Join As Caregiver
                   <img className="logo-reg-btn" src={DonateIcon} />

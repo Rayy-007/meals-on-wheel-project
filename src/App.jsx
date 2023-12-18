@@ -21,7 +21,6 @@ import RegisterCareGiver from "./components/register/RegisterCareGiver";
 
 import RegisterMember from "./components/register/RegisterMember";
 
-
 import Members from "./components/management/admin/Members";
 import Parners from "./components/management/admin/Parners";
 import Dontators from "./components/management/admin/Dontators";
@@ -39,9 +38,9 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />}>
             <Route index element={<RegisterMember />} />
-            <Route path="registerP" element={<RegisterPartner />} />
-            <Route path="registerV" element={<RegisterVolunteer />} />
-            <Route path="registerC" element={<RegisterCareGiver />} />
+            <Route path="partner" element={<RegisterPartner />} />
+            <Route path="volunteer" element={<RegisterVolunteer />} />
+            <Route path="caregiver" element={<RegisterCareGiver />} />
           </Route>
           {/* Management Pages */}
 
@@ -52,13 +51,13 @@ function App() {
           <Route path="/safety" element={<FoodSafety />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/deliveryMang" element={<Delivery />} />
-          <Route path="admin" element={<Admin />} >
+          <Route path="admin" element={<Admin />}>
             <Route path="member" element={<Members />} />
             <Route path="caregiver" element={<Caregivers />} />
             <Route path="volunteer" element={<Volunteers />} />
             <Route path="partner" element={<Parners />} />
             <Route path="donator" element={<Dontators />} />
-            <Route path="rider" element = {<Riders />} />
+            <Route path="rider" element={<Riders />} />
           </Route>
 
           {/* User Roles */}

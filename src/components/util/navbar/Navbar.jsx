@@ -49,7 +49,7 @@ const Navbar = () => {
         <li>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : null)}
-            to="/getmeal"
+            to="/register"
           >
             Get Meal
           </NavLink>

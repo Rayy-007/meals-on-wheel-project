@@ -54,7 +54,9 @@ const Delivery = () => {
   return (
     <div className="container">
       <div className="">
-        <h3 style={{ color: "#f8590af6" }}>Assign Delivery Information </h3>
+        <h3 style={{ color: "#f8590af6" }}>
+          Food Order & Delivery Management For partner
+        </h3>
         <br />
 
         <table>

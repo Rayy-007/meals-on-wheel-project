@@ -46,11 +46,9 @@ function App() {
 
           <Route path="safety" element={<FoodSafety />} />
           <Route path="feedback" element={<Feedback />} />
-          <Route path="deliveryMang" element={<Delivery />} />
 
           <Route path="/safety" element={<FoodSafety />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/deliveryMang" element={<Delivery />} />
           <Route path="admin" element={<Admin />}>
             <Route path="member" element={<Members />} />
             <Route path="caregiver" element={<Caregivers />} />
@@ -62,6 +60,7 @@ function App() {
 
           {/* User Roles */}
           <Route path="user">
+            <Route path="partner" element={<Delivery />} />
             <Route path="volunteer" element={<Volunteer />} />
             <Route path="caregiver" element={<Caregiver />} />
             <Route path="rider" element={<Rider />} />

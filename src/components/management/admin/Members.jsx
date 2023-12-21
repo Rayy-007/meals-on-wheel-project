@@ -56,6 +56,7 @@ export default function Members() {
   return (
     <>
       <div className="table">
+        <h2>Member</h2>
         <table>
           <thead>
             <tr>

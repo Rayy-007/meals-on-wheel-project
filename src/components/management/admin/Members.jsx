@@ -56,6 +56,7 @@ export default function Members() {
   return (
     <>
       <div className="table">
+        <h2>Member</h2>
         <table>
           <thead>
             <tr>
@@ -67,17 +68,17 @@ export default function Members() {
             </tr>
           </thead>
           <tbody>
-            
-              {data.map((memebersInfo) => {
-                  return <tr>
-                      <td>{memebersInfo.Name}</td>
-                      <td>{memebersInfo.Email}</td>
-                      <td>{memebersInfo.Address}</td>
-                      <td>{memebersInfo.DeliverTime}</td>
-                      <td>{ memebersInfo.Rider}</td>
-                  </tr>
-              })}
-            
+            {data.map((memebersInfo) => {
+              return (
+                <tr>
+                  <td>{memebersInfo.Name}</td>
+                  <td>{memebersInfo.Email}</td>
+                  <td>{memebersInfo.Address}</td>
+                  <td>{memebersInfo.DeliverTime}</td>
+                  <td>{memebersInfo.Rider}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

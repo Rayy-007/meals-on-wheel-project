@@ -30,6 +30,10 @@ import Riders from "./components/management/admin/Riders";
 
 //  Data fetch
 import { memberData } from "./dataFetch/memberData";
+import { partnerData } from "./dataFetch/partnerData";
+import { volunteerData } from "./dataFetch/volunteerData";
+import { caregiveData } from "./dataFetch/caregiverData";
+
 // import { memberData } from "./dataFetch/memberData";
 
 function App() {
@@ -38,6 +42,24 @@ function App() {
     memberData(data);
     console.log("This is from app.jsx", data);
   };
+
+  const onHandleRegisterPartner = (data) => {
+    //partnerData (partnerData.js)
+    partnerData(data)
+    console.log("Thiis is from app.jsx", data);
+  }
+
+  const onHandleRegisterVolunteer = (data) => {
+    //volunteerData (volunteerData.js)
+    volunteerData(data)
+    console.log("This is from app.jsx", data);
+  }
+
+  const onHandleRegisterCaregiver = (data) => {
+    //caregiverData (cargiverData.js)
+    caregiveData(data)
+    console.log("This is from app.jsx", data);
+  }
 
   return (
     <BrowserRouter>
@@ -51,9 +73,9 @@ function App() {
               index
               element={<RegisterMember onHandleRegister={onHandleRegister} />}
             />
-            <Route path="partner" element={<RegisterPartner />} />
-            <Route path="volunteer" element={<RegisterVolunteer />} />
-            <Route path="caregiver" element={<RegisterCareGiver />} />
+            <Route path="partner" element={<RegisterPartner onHandleRegisterPartner={onHandleRegisterPartner}/>} />
+            <Route path="volunteer" element={<RegisterVolunteer onHandleRegisterVolunteer={ onHandleRegisterVolunteer} />} />
+            <Route path="caregiver" element={<RegisterCareGiver onHandleRegisterCaregiver={onHandleRegisterCaregiver } />} />
           </Route>
           {/* Management Pages */}
 

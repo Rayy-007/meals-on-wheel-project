@@ -28,6 +28,7 @@ import Caregivers from "./components/management/admin/Caregivers";
 import Volunteers from "./components/management/admin/Volunteers";
 import Riders from "./components/management/admin/Riders";
 
+import DonateForm from "./components/donate/donate.jsx";
 //  Data fetch
 import { memberData } from "./dataFetch/memberData";
 // import { memberData } from "./dataFetch/memberData";
@@ -46,6 +47,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
+          <Route path="donate" element={< DonateForm />} />
           <Route path="register" element={<Register />}>
             <Route
               index

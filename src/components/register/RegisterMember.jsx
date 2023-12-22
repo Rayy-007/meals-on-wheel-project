@@ -1,5 +1,46 @@
+import MapComponent from "../../dataFetch/MapComponent";
 import "./register.css";
-const RegisterMember = () => {
+import { useState } from "react";
+
+const RegisterMember = ({ onHandleRegister }) => {
+  // State to manage form data
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    address: "",
+  });
+
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    // Reset the passwordsMatch state when any input changes
+    setPasswordsMatch(true);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+    // Check if passwords match and update the passwordsMatch state
+    setPasswordsMatch(formData.password === e.target.value);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Simple client-side validation to check if password and confirmation match
+    if (!passwordsMatch) {
+      alert("Password and Confirm Password do not match!");
+      return;
+    }
+
+    console.log("Form data submitted:", formData);
+
+    onHandleRegister(formData);
+  };
+
   return (
     <div className="violet-form">
       <h3>
@@ -8,34 +49,46 @@ const RegisterMember = () => {
       <h5>
         This form if for Memeber 👉to getting supportation of Meal daily 👈 !
       </h5>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <input
           type="text"
-          name="name"
+          name="username"
+          value={formData.name}
+          onChange={handleInputChange}
           placeholder="Enter your name.."
           required
         />
         <input
           type="email"
           name="email"
+          value={formData.email}
+          onChange={handleInputChange}
           placeholder="Enter your email.."
           required
         />
         <input
           type="pre-password"
-          name="#"
+          name="password"
+          value={formData.password}
+          onChange={handleInputChange}
           placeholder="Enter Password.."
           required
         />
         <input
           type="password"
-          name="password"
+          name="conPassword"
           placeholder="Confirm Password.."
+          onChange={handleConfirmPasswordChange}
+          style={{
+            borderColor: passwordsMatch ? "" : "red",
+          }}
           required
         />
         <textarea
           type="textarea"
           name="address"
+          value={formData.address}
+          onChange={handleInputChange}
           placeholder="Address..."
           required
         />
@@ -51,6 +104,8 @@ const RegisterMember = () => {
           placeholder="About Diseases Information..."
           required
         />
+
+        <MapComponent />
         <button className="btn secondary form-btn">Submit</button>
       </form>
     </div>

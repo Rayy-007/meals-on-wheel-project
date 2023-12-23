@@ -7,7 +7,8 @@ const RegisterCareGiver = ({onHandleRegisterCaregiver}) => {
     username: "",
     email: "",
     password: "",
-    address: "",
+    caregiverQualificationandSkills: "",
+    address: ""
   });
 
   const handleInputChange = (e) => {
@@ -56,7 +57,12 @@ const RegisterCareGiver = ({onHandleRegisterCaregiver}) => {
         />
         <label>
           Please enter your skill or Experience Evidence..
-          <input type="file" name="file" required />
+          <textarea 
+          type="text" 
+          name="caregiverQualificationandSkills" 
+          value={formData.caregiverQualificationandSkills}
+          onChange={handleInputChange}
+          required />
         </label>
 
         <textarea

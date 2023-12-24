@@ -19,8 +19,7 @@ const Login = () => {
   
       if (response && response.data) {
         console.log(response.data); // You might want to handle the response accordingly
-
-
+        
           // Redirect to a different page based on the user type
 
           const authorities = response.data.authorities || [];

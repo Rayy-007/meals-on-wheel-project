@@ -104,8 +104,6 @@ const RegisterMember = ({ onHandleRegister }) => {
           placeholder="About Diseases Information..."
           required
         />
-
-        <MapComponent />
         <button className="btn secondary form-btn">Submit</button>
       </form>
     </div>

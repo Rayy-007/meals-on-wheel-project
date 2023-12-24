@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const MapComponent = () => {
+const MapComponent = ({onUserLocationChange}) => {
   const [userLocation, setUserLocation] = useState(null);
+  const [distanceTanta, setdistance] = useState(null);
+  
 
   useEffect(() => {
     const loadGoogleMapsScript = () => {
@@ -84,15 +86,8 @@ const MapComponent = () => {
                 tantaLocation,
                 userLatlng
               );
-
-            alert(
-              "Distance from Tanta: " +
-                distanceToTanta.toFixed(2) +
-                " meters" +
-                "Distance from Office: " +
-                distanceToOffice.toFixed(2) +
-                " meters"
-            );
+              onUserLocationChange(userLatlng);
+           
           },
           (error) => {
             console.error("Error getting user location:", error);
@@ -123,5 +118,6 @@ const MapComponent = () => {
 
   return <div id="map" style={{ height: "400px" }}></div>;
 };
+
 
 export default MapComponent;

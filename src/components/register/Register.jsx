@@ -1,4 +1,5 @@
 import "./register.css";
+
 import {
   RegisterImage,
   PartnerIcon,
@@ -92,8 +93,11 @@ const Register = () => {
             </div>
           )}
         </div>
-        <img className="register-photo" src={RegisterImage} />
+
+        <img className="register-photo" src={RegisterImage} /> 
+
       </section>
+      
     </div>
   );
 };

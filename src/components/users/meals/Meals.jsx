@@ -1,4 +1,5 @@
 import "./meal.css";
+import MapComponent from "../../../dataFetch/MapComponent";
 import hotmeals from "./hotmeals";
 import frozenmeals from "./frozenmeals";
 import {
@@ -9,8 +10,14 @@ import {
   HotMeal2,
   HotMeal3,
 } from "../../ImagesImport";
+import { useState } from "react";
 
 const Meals = () => {
+  const userLocation = useState(null);
+  const handleUserLocationChange = (userLocation) => {
+    setFormData({ ...formData, userLocation: userLocation.toString() });
+    console.log(companyLocation);
+  };
   const HotMeals = hotmeals.map((hotmeal) => {
     return (
       <div className="meal">
@@ -52,6 +59,7 @@ const Meals = () => {
 
   return (
     <div className="container meals">
+      <MapComponent onUserLocationChange={handleUserLocationChange} />
       <h2>Available meals for today</h2>
       <section className="meal hotmeal-con">
         <h3 className="text-orange">Hot Meals</h3>

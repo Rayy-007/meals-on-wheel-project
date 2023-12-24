@@ -1,6 +1,7 @@
 import "./register.css";
 import { frozen1, hotMeal1, hotMeal3 } from "../ImagesImport";
 import { useState } from "react";
+import MapComponent from "../../dataFetch/MapComponent";
 
 const RegisterPartner = ({onHandleRegisterPartner}) => {
   //state to manage form data
@@ -10,12 +11,19 @@ const RegisterPartner = ({onHandleRegisterPartner}) => {
     companyDes: "",
     companyName: "",
     address: "",
-    password: ""
+    password: "",
+    companyLocation : ""
   })
+
+  const handleUserLocationChange = (userLocation) => {
+    setFormData({ ...formData, companyLocation: userLocation.toString() });
+    console.log(companyLocation);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    
   };
 
   const handleFormSubmit = (e) => {
@@ -31,6 +39,7 @@ const RegisterPartner = ({onHandleRegisterPartner}) => {
         <span className="member-text">Partner Registration</span>{" "}
       </h3>
       <h5>Welcome to be 🥰 partnership with us🙌!</h5>
+      <MapComponent onUserLocationChange={handleUserLocationChange} />
       <form onSubmit={handleFormSubmit}>
         <input
           type="text"
@@ -57,11 +66,22 @@ const RegisterPartner = ({onHandleRegisterPartner}) => {
           required
         />
         <input
-          type="number"
+          type="password"
           name="password"
           value={ formData.password}
           onChange={handleInputChange}
-          placeholder="Type of Business.."
+          placeholder="Password..."
+          required
+        />
+        <label>
+          Your Company Geolocation is here
+        </label>
+        <input
+          type="text"
+          name="companyLocation"
+          value={ formData.companyLocation}
+          onChange={handleInputChange}
+          
           required
         />
         <textarea

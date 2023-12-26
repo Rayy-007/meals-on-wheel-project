@@ -61,6 +61,14 @@ export default function () {
           >
             Riders
           </NavLink>
+
+          <NavLink
+            style={({ isActive }) => (isActive ? activeStyle : null)}
+            className="button "
+            to="order"
+          >
+            Orders Info
+          </NavLink>
         </nav>
       </div>
 

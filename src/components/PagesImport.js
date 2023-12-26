@@ -10,7 +10,7 @@ import Rider from "./users/rider/Rider";
 import Caregiver from "./users/caregiver/Caregiver";
 // Management Pages
 import Admin from "./management/admin/Admin";
-import Delivery from "./management/delivery/Delivery";
+import Delivery from "./management/partner/Delivery";
 import Feedback from "./management/feedback/Feedback";
 import FoodSafety from "./management/foodSafety/FoodSafety";
 

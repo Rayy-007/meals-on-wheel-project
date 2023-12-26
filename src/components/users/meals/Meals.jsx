@@ -12,6 +12,7 @@ import {
 } from "../../ImagesImport";
 import { useState } from "react";
 
+
 const Meals = () => {
   const userLocation = useState(null);
   const handleUserLocationChange = (userLocation) => {

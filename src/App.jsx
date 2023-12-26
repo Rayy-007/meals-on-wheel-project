@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./components/login/AuthContext.jsx";
 import Layout from "./Layout";
 import {
   Caregiver,
@@ -28,12 +29,21 @@ import Caregivers from "./components/management/admin/Caregivers";
 import Volunteers from "./components/management/admin/Volunteers";
 import Riders from "./components/management/admin/Riders";
 
+import OrderComponent from "./components/management/admin/OrderComponent.jsx";
+import DonateForm from "./components/donate/donate.jsx";
+
+
 import DonationForm from "./components/donate/DonationForm";
+
 //  Data fetch
 import { memberData } from "./dataFetch/memberData";
 import { partnerData } from "./dataFetch/partnerData";
 import { volunteerData } from "./dataFetch/volunteerData";
 import { caregiveData } from "./dataFetch/caregiverData";
+
+import MealForm from "./components/management/partner/MealUpload.jsx";
+//import { memberData } from "./dataFetch/memberData";
+
 
 function App() {
   const onHandleRegister = (data) => {
@@ -62,6 +72,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -117,11 +128,15 @@ function App() {
             <Route path="partner" element={<Parners />} />
             <Route path="donator" element={<Dontators />} />
             <Route path="rider" element={<Riders />} />
+            <Route path="order" element={<OrderComponent />} />
           </Route>
 
           {/* User Roles */}
           <Route path="user">
-            <Route path="partner" element={<Delivery />} />
+            <Route path="partner" element={<Delivery />}/>
+            <Route path="mealform" element={<MealForm />} />
+            
+
             <Route path="volunteer" element={<Volunteer />} />
             <Route path="caregiver" element={<Caregiver />} />
             <Route path="rider" element={<Rider />} />
@@ -129,6 +144,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

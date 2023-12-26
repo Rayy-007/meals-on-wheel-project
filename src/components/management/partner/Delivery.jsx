@@ -1,4 +1,4 @@
-import "../delivery/delivery.css";
+import "./delivery.css";
 
 const Delivery = () => {
   const data = [
@@ -57,6 +57,8 @@ const Delivery = () => {
         <h3 style={{ color: "#f8590af6" }}>
           Food Order & Delivery Management For partner
         </h3>
+        <br/>
+        <button className="btn violent"><a href="/user/mealform">Upload Meal</a></button>
         <br />
 
         <table>

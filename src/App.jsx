@@ -66,9 +66,14 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
+
+          {/* Donate Form */}
+          <Route path="donate" element={<DonationForm />} />
+
+          {/* Login Page */}
           <Route path="login" element={<Login />} />
 
-          <Route path="donate" element={<DonationForm />} />
+          {/* Register Page for all user */}
           <Route path="register" element={<Register />}>
             <Route
               index
@@ -99,13 +104,12 @@ function App() {
               }
             />
           </Route>
-          {/* Management Pages */}
 
+          {/* Management Pages */}
           <Route path="safety" element={<FoodSafety />} />
           <Route path="feedback" element={<Feedback />} />
 
-          <Route path="/safety" element={<FoodSafety />} />
-          <Route path="/feedback" element={<Feedback />} />
+          {/* Admin Dashboard */}
           <Route path="admin" element={<Admin />}>
             <Route path="member" element={<Members />} />
             <Route path="caregiver" element={<Caregivers />} />

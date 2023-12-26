@@ -85,7 +85,7 @@ const Register = () => {
                 </NavLink>
                 <p>
                   Already have an account?
-                  <a href="#" className="text-orange">
+                  <a href="/login" className="text-orange">
                     Login here
                   </a>
                 </p>

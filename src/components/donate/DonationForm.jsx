@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const DonationForm = () => {
   return (
@@ -13,10 +13,10 @@ const DonationForm = () => {
         src="https://form.jotform.com/233554101186450"
         frameBorder="1"
         style={{
-          minWidth: '100%',
-          maxWidth: '100%',
-          height: '539px',
-          border: 'none',
+          minWidth: "100%",
+          maxWidth: "100%",
+          height: "539px",
+          border: "none",
         }}
         scrolling="yes"
       />

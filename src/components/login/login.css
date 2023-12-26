@@ -1,6 +1,8 @@
 .login-con {
   height: 80vh;
   padding-left: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
 }
 
 .login-con .login-form {
@@ -11,4 +13,5 @@
   position: absolute;
   right: 0;
   width: 600px;
+  z-index: 100;
 }

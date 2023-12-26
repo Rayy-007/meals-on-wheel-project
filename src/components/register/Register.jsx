@@ -94,10 +94,8 @@ const Register = () => {
           )}
         </div>
 
-        <img className="register-photo" src={RegisterImage} /> 
-
+        <img className="register-photo" src={RegisterImage} />
       </section>
-      
     </div>
   );
 };

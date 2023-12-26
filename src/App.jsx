@@ -30,10 +30,8 @@ import Volunteers from "./components/management/admin/Volunteers";
 import Riders from "./components/management/admin/Riders";
 
 import OrderComponent from "./components/management/admin/OrderComponent.jsx";
-import DonateForm from "./components/donate/donate.jsx";
 
-
-import DonationForm from "./components/donate/DonationForm";
+import DonationForm from "./components/donate/DonationForm.jsx";
 
 //  Data fetch
 import { memberData } from "./dataFetch/memberData";

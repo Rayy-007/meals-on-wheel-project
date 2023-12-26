@@ -1,8 +1,8 @@
 import "./login.css";
 import { LoginImage } from "../ImagesImport";
-import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
 import { useAuth } from "./AuthContext";
 
 const Login = () => {
@@ -14,24 +14,27 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/user-api/login', {
-        email,
-        password,
-      });
-  
+      const response = await axios.post(
+        "http://localhost:8080/user-api/login",
+        {
+          email,
+          password,
+        }
+      );
+
       if (response && response.data) {
         console.log(response.data); // You might want to handle the response accordingly
         authContext.login(response.data);
 
-                  // Redirect to a different page based on the user type
+        // Redirect to a different page based on the user type
 
         const authorities = response.data.authorities || [];
         const authorityRoutes = {
-          'ROLE_MEMBER': '/user/meals',
-          'ROLE_PARTNER': '/user/partner',
-          'ROLE_RIDER' : '/user/rider',
-          'ROLE_CAREGIVER' : '/user/caregiver',
-          'ROLE_VOLUNTEER' : '/user/volunteer'
+          ROLE_MEMBER: "/user/meals",
+          ROLE_PARTNER: "/user/partner",
+          ROLE_RIDER: "/user/rider",
+          ROLE_CAREGIVER: "/user/caregiver",
+          ROLE_VOLUNTEER: "/user/volunteer",
           // Add more authority types and corresponding routes as needed
         };
 
@@ -42,17 +45,15 @@ const Login = () => {
             return; // Stop further checking if a match is found
           }
         }
-
       } else {
-        console.error('Invalid response:', response);
+        console.error("Invalid response:", response);
         // Handle unexpected response structure here
       }
     } catch (error) {
-      console.error('Login failed:', error.response?.data || error.message);
+      console.error("Login failed:", error.response?.data || error.message);
     }
-      // Handle login error here
+    // Handle login error here
   };
-
 
   return (
     <div className="container flex login-con">

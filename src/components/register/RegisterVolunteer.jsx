@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./register.css";
 
-const RegisterVolunteer = ({onHandleRegisterVolunteer}) => {
+const RegisterVolunteer = ({ onHandleRegisterVolunteer }) => {
   // State to manage form data
   const [formData, setFormData] = useState({
     username: "",
@@ -13,7 +13,6 @@ const RegisterVolunteer = ({onHandleRegisterVolunteer}) => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    
   };
 
   const handleFormSubmit = (e) => {

@@ -117,6 +117,7 @@ function App() {
           {/* Management Pages */}
           <Route path="safety" element={<FoodSafety />} />
           <Route path="feedback" element={<Feedback />} />
+  
 
           {/* Admin Dashboard */}
           <Route path="admin" element={<Admin />}>

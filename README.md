@@ -31,4 +31,5 @@ This repository contains the full-stack development project for the MerryMeal ap
 
 # Desinged By Min Khant
 
-![Pages Home](https://github.com/Rayy-007/meals-on-wheel-project/assets/113674028/3b6a1285-e6b2-432b-81cc-57c220643d08)
+![image](https://github.com/Rayy-007/meals-on-wheel-project/assets/113674028/d30a489b-f4c9-4f85-94ef-cd3b9e972ec5)
+

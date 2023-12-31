@@ -1,9 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { Logo, Member } from "../../ImagesImport";
+import { Logo, Partner } from "../../ImagesImport";
 import "./navbar.css";
 import { useState } from "react";
 
-const NavbarMember = ({ logout }) => {
+const NavbarPartner = ({ logout }) => {
   const navigate = useNavigate();
 
   const [isLogginOut, setIsLogginOut] = useState(false);
@@ -69,9 +69,9 @@ const NavbarMember = ({ logout }) => {
           <li>
             <NavLink
               style={({ isActive }) => (isActive ? activeStyle : null)}
-              to="/register"
+              to="/user/partner"
             >
-              Get Meal
+              Meal Management
             </NavLink>
           </li>
           <li className="dropdown">
@@ -95,9 +95,9 @@ const NavbarMember = ({ logout }) => {
         <div className="profile-con">
           <div className="profile">
             <div className="profile-img">
-              <img src={Member} alt="Member Profile" />
+              <img src={Partner} alt="Partner Profile" />
             </div>
-            <p>Member</p>
+            <p>Partner</p>
           </div>
           <button onClick={() => setIsLogginOut(true)} className="btn blue">
             Log out
@@ -108,4 +108,4 @@ const NavbarMember = ({ logout }) => {
   );
 };
 
-export default NavbarMember;
+export default NavbarPartner;

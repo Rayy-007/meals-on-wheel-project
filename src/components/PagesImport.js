@@ -17,6 +17,11 @@ import FoodSafety from "./management/foodSafety/FoodSafety";
 // Utility Components
 import Navbar from "./util/navbar/Navbar";
 import NavbarMember from "./util/navbar/NavbarMember";
+import NavbarPartner from "./util/navbar/NavbarPartner";
+import NavbarVolunteer from "./util/navbar/NavbarVolunteer";
+import NavbarCareGiver from "./util/navbar/NavbarCareGiver";
+import NavbarRider from "./util/navbar/NavbarRider";
+import NavbarAdmin from "./util/navbar/NavbarAdmin";
 import Footer from "./util/footer/Footer";
 
 export {
@@ -34,5 +39,10 @@ export {
   FoodSafety,
   Navbar,
   NavbarMember,
+  NavbarPartner,
+  NavbarAdmin,
+  NavbarCareGiver,
+  NavbarVolunteer,
+  NavbarRider,
   Footer,
 };

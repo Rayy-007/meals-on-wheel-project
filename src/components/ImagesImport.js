@@ -56,7 +56,7 @@ import Admin from "../assets/profile/admin-profile.png";
 import Caregiver from "../assets/profile/caregiver-profile.png";
 import Member from "../assets/profile/member-profile.png";
 import Partner from "../assets/profile/partner-profile.png";
-import Rider from "../assets/profile/rider-profile.png";
+import Rider from "../assets/profile/rider.png";
 import Volunteer from "../assets/profile/volunteer-profile.png";
 
 export {

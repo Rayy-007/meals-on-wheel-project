@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import MapComponent from "../../dataFetch/MapComponent";
 import "./register.css";
 import { useState } from "react";
 
 const RegisterMember = ({ onHandleRegister }) => {
+  const navigate = useNavigate();
   // State to manage form data
   const [formData, setFormData] = useState({
     username: "",
@@ -37,8 +39,9 @@ const RegisterMember = ({ onHandleRegister }) => {
     }
 
     console.log("Form data submitted:", formData);
-
     onHandleRegister(formData);
+    alert("Register successful, Please Login with your credentials!");
+    navigate("/login");
   };
 
   return (

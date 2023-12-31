@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./register.css";
+import { useNavigate } from "react-router-dom";
 
 const RegisterVolunteer = ({ onHandleRegisterVolunteer }) => {
+  const navigate = useNavigate();
   // State to manage form data
   const [formData, setFormData] = useState({
     username: "",
@@ -21,6 +23,9 @@ const RegisterVolunteer = ({ onHandleRegisterVolunteer }) => {
     console.log("Form data submitted:", formData);
 
     onHandleRegisterVolunteer(formData);
+
+    alert("Register successful, Please Login with your credentials!");
+    navigate("/login");
   };
   return (
     <div className="green-form">

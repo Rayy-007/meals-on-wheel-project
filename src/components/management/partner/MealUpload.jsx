@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { useAuth } from '../../login/AuthContext';
+import React, { useState } from "react";
+import axios from "axios";
+import { useAuth } from "../../login/AuthContext";
 
 const MealForm = () => {
-    const { user } = useAuth();
+  const { user } = useAuth();
   const [file, setFile] = useState(null);
-  const [mealName, setMealName] = useState('');
-  const [mealDesc, setMealDesc] = useState('');
+  const [mealName, setMealName] = useState("");
+  const [mealDesc, setMealDesc] = useState("");
 
   const partnerId = user?.partnerId || null;
 
@@ -28,9 +28,9 @@ const MealForm = () => {
     try {
       // Create a FormData object to send files and other data
       const formData = new FormData();
-      formData.append('file', file);
-      formData.append('mealName', mealName);
-      formData.append('mealDesc', mealDesc);
+      formData.append("file", file);
+      formData.append("mealName", mealName);
+      formData.append("mealDesc", mealDesc);
 
       // Make a POST request to the backend
       const response = await axios.post(
@@ -38,38 +38,40 @@ const MealForm = () => {
         formData,
         {
           headers: {
-            'Content-Type': 'multipart/form-data',
+            "Content-Type": "multipart/form-data",
           },
         }
       );
 
-      console.log('Response:', response.data);
+      console.log("Response:", response.data);
       // Handle the response accordingly
     } catch (error) {
-      console.error('Error uploading file:', error);
+      console.error("Error uploading file:", error);
       // Handle the error accordingly
     }
   };
 
   return (
-    <div className='container'>
+    <div className="container">
       <form onSubmit={handleSubmit}>
-      <label>
-        Meal Name:
-        <input type="text" value={mealName} onChange={handleMealNameChange} />
-        Meal Desc:
-        <input type="text" value={mealDesc} onChange={handleMealDescChange} />
-      </label>
-      <br />
-      <label>
-        File:
-        <input type="file" onChange={handleFileChange} />
-      </label>
-      <br />
-      <button type="submit">Upload Meal</button>
-    </form>
+        <label>
+          Meal Name:
+          <input type="text" value={mealName} onChange={handleMealNameChange} />
+        </label>
+        <label>
+          Meal Desc:
+          <input type="text" value={mealDesc} onChange={handleMealDescChange} />
+        </label>
+        <label>
+          File:
+          <input type="file" onChange={handleFileChange} />
+        </label>
+        <br />
+        <button className="btn primary " type="submit">
+          Upload Meal
+        </button>
+      </form>
     </div>
-    
   );
 };
 

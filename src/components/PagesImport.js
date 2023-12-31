@@ -16,6 +16,7 @@ import FoodSafety from "./management/foodSafety/FoodSafety";
 
 // Utility Components
 import Navbar from "./util/navbar/Navbar";
+import NavbarMember from "./util/navbar/NavbarMember";
 import Footer from "./util/footer/Footer";
 
 export {
@@ -32,5 +33,6 @@ export {
   Feedback,
   FoodSafety,
   Navbar,
+  NavbarMember,
   Footer,
 };

@@ -51,6 +51,14 @@ import OldMan1 from "../assets/people/old-man-1.jpg";
 import Woman1 from "../assets/people/old-woman-1.jpg";
 import Woman2 from "../assets/people/old-woman-2.jpg";
 
+// Profile images
+import Admin from "../assets/profile/admin-profile.png";
+import Caregiver from "../assets/profile/caregiver-profile.png";
+import Member from "../assets/profile/member-profile.png";
+import Partner from "../assets/profile/partner-profile.png";
+import Rider from "../assets/profile/rider-profile.png";
+import Volunteer from "../assets/profile/volunteer-profile.png";
+
 export {
   HomeDonate,
   HomeGiveFood,
@@ -95,4 +103,10 @@ export {
   Woman2,
   SendArrow,
   PartnerIcon,
+  Admin,
+  Caregiver,
+  Partner,
+  Member,
+  Rider,
+  Volunteer,
 };

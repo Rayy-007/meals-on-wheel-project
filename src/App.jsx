@@ -40,8 +40,8 @@ import { volunteerData } from "./dataFetch/volunteerData";
 import { caregiveData } from "./dataFetch/caregiverData";
 
 import MealForm from "./components/management/partner/MealUpload.jsx";
+import { createContext } from "react";
 //import { memberData } from "./dataFetch/memberData";
-
 
 function App() {
   const onHandleRegister = (data) => {
@@ -70,79 +70,77 @@ function App() {
 
   return (
     <BrowserRouter>
-    <AuthProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="contact" element={<Contact />} />
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="contact" element={<Contact />} />
 
-          {/* Donate Form */}
-          <Route path="donate" element={<DonationForm />} />
+            {/* Donate Form */}
+            <Route path="donate" element={<DonationForm />} />
 
-          {/* Login Page */}
-          <Route path="login" element={<Login />} />
+            {/* Login Page */}
+            <Route path="login" element={<Login />} />
 
-          {/* Register Page for all user */}
-          <Route path="register" element={<Register />}>
-            <Route
-              index
-              element={<RegisterMember onHandleRegister={onHandleRegister} />}
-            />
-            <Route
-              path="partner"
-              element={
-                <RegisterPartner
-                  onHandleRegisterPartner={onHandleRegisterPartner}
-                />
-              }
-            />
-            <Route
-              path="volunteer"
-              element={
-                <RegisterVolunteer
-                  onHandleRegisterVolunteer={onHandleRegisterVolunteer}
-                />
-              }
-            />
-            <Route
-              path="caregiver"
-              element={
-                <RegisterCareGiver
-                  onHandleRegisterCaregiver={onHandleRegisterCaregiver}
-                />
-              }
-            />
+            {/* Register Page for all user */}
+            <Route path="register" element={<Register />}>
+              <Route
+                index
+                element={<RegisterMember onHandleRegister={onHandleRegister} />}
+              />
+              <Route
+                path="partner"
+                element={
+                  <RegisterPartner
+                    onHandleRegisterPartner={onHandleRegisterPartner}
+                  />
+                }
+              />
+              <Route
+                path="volunteer"
+                element={
+                  <RegisterVolunteer
+                    onHandleRegisterVolunteer={onHandleRegisterVolunteer}
+                  />
+                }
+              />
+              <Route
+                path="caregiver"
+                element={
+                  <RegisterCareGiver
+                    onHandleRegisterCaregiver={onHandleRegisterCaregiver}
+                  />
+                }
+              />
+            </Route>
+
+            {/* Management Pages */}
+            <Route path="safety" element={<FoodSafety />} />
+            <Route path="feedback" element={<Feedback />} />
+
+            {/* Admin Dashboard */}
+            <Route path="admin" element={<Admin />}>
+              <Route path="member" element={<Members />} />
+              <Route path="caregiver" element={<Caregivers />} />
+              <Route path="volunteer" element={<Volunteers />} />
+              <Route path="partner" element={<Parners />} />
+              <Route path="donator" element={<Dontators />} />
+              <Route path="rider" element={<Riders />} />
+              <Route path="order" element={<OrderComponent />} />
+            </Route>
+
+            {/* User Roles */}
+            <Route path="user">
+              <Route path="partner" element={<Delivery />} />
+              <Route path="mealform" element={<MealForm />} />
+
+              <Route path="volunteer" element={<Volunteer />} />
+              <Route path="caregiver" element={<Caregiver />} />
+              <Route path="rider" element={<Rider />} />
+              <Route path="meals" element={<Meals />} />
+            </Route>
           </Route>
-
-          {/* Management Pages */}
-          <Route path="safety" element={<FoodSafety />} />
-          <Route path="feedback" element={<Feedback />} />
-  
-
-          {/* Admin Dashboard */}
-          <Route path="admin" element={<Admin />}>
-            <Route path="member" element={<Members />} />
-            <Route path="caregiver" element={<Caregivers />} />
-            <Route path="volunteer" element={<Volunteers />} />
-            <Route path="partner" element={<Parners />} />
-            <Route path="donator" element={<Dontators />} />
-            <Route path="rider" element={<Riders />} />
-            <Route path="order" element={<OrderComponent />} />
-          </Route>
-
-          {/* User Roles */}
-          <Route path="user">
-            <Route path="partner" element={<Delivery />}/>
-            <Route path="mealform" element={<MealForm />} />
-            
-
-            <Route path="volunteer" element={<Volunteer />} />
-            <Route path="caregiver" element={<Caregiver />} />
-            <Route path="rider" element={<Rider />} />
-            <Route path="meals" element={<Meals />} />
-          </Route>
-        </Route>
-      </Routes>
+        </Routes>
       </AuthProvider>
     </BrowserRouter>
   );

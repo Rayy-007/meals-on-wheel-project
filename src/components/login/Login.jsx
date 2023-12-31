@@ -12,7 +12,8 @@ const Login = () => {
 
   const authContext = useAuth();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
       const response = await axios.post(
         "http://localhost:8080/user-api/login",
@@ -60,13 +61,14 @@ const Login = () => {
       <section className="login-form">
         <h2>Welcome Back!</h2>
         <p>Login!</p>
-        <form>
+        <form onSubmit={handleLogin}>
           <input
             type="email"
             value={email}
             name="email"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <input
             type="password"
@@ -74,8 +76,9 @@ const Login = () => {
             name="password"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          <button type="button" className="btn primary" onClick={handleLogin}>
+          <button type="submit" className="btn primary">
             Login
           </button>
         </form>

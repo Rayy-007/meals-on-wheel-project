@@ -7,6 +7,7 @@ import {
   NavbarRider,
   NavbarCareGiver,
   NavbarAdmin,
+  NavbarVolunteer,
 } from "./components/PagesImport";
 import { useContext } from "react";
 import { useAuth } from "./components/login/AuthContext";
@@ -27,7 +28,7 @@ const Layout = () => {
       ) : role === "ROLE_CAREGIVER" ? (
         <NavbarCareGiver logout={logout} />
       ) : role === "ROLE_VOLUNTEER" ? (
-        <NavbarAdmin logout={logout} />
+        <NavbarVolunteer logout={logout} />
       ) : (
         <Navbar />
       )}

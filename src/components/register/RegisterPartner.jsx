@@ -2,8 +2,10 @@ import "./register.css";
 import { frozen1, hotMeal1, hotMeal3 } from "../ImagesImport";
 import { useState } from "react";
 import MapComponent from "../../dataFetch/MapComponent";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPartner = ({ onHandleRegisterPartner }) => {
+  const navigate = useNavigate();
   //state to manage form data
   const [formData, setFormData] = useState({
     email: "",
@@ -29,6 +31,9 @@ const RegisterPartner = ({ onHandleRegisterPartner }) => {
     e.preventDefault();
     console.log("Form data submitted:", formData);
     onHandleRegisterPartner(formData);
+
+    alert("Register successful, Please Login with your credentials!");
+    navigate("/login");
   };
 
   return (

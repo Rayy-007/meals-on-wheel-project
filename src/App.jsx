@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { AuthProvider } from "./components/login/AuthContext.jsx";
 import Layout from "./Layout";
 import {
@@ -47,25 +47,21 @@ function App() {
   const onHandleRegister = (data) => {
     // memberData(memberData);
     memberData(data);
-    console.log("This is from app.jsx", data);
   };
 
   const onHandleRegisterPartner = (data) => {
     //partnerData (partnerData.js)
     partnerData(data);
-    console.log("Thiis is from app.jsx", data);
   };
 
   const onHandleRegisterVolunteer = (data) => {
     //volunteerData (volunteerData.js)
     volunteerData(data);
-    console.log("This is from app.jsx", data);
   };
 
   const onHandleRegisterCaregiver = (data) => {
     //caregiverData (cargiverData.js)
     caregiveData(data);
-    console.log("This is from app.jsx", data);
   };
 
   return (

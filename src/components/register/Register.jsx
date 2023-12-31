@@ -25,7 +25,7 @@ const Register = () => {
         <div className="register-form">
           {loading ? (
             <div className="loading">
-              <div class="lds-ellipsis">
+              <div className="lds-ellipsis">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -41,7 +41,7 @@ const Register = () => {
           <br />
           {loading ? (
             <div className="loading">
-              <div class="lds-ellipsis">
+              <div className="lds-ellipsis">
                 <div></div>
                 <div></div>
                 <div></div>

@@ -29,7 +29,9 @@ const Layout = () => {
         <NavbarCareGiver logout={logout} />
       ) : role === "ROLE_VOLUNTEER" ? (
         <NavbarVolunteer logout={logout} />
-      ) : (
+      ) : role === "ROLE_ADMIN" ? (
+        <NavbarAdmin logout={logout} />
+      ) :(
         <Navbar />
       )}
 

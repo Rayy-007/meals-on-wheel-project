@@ -36,6 +36,7 @@ const Login = () => {
           ROLE_RIDER: "/user/rider",
           ROLE_CAREGIVER: "/user/caregiver",
           ROLE_VOLUNTEER: "/user/volunteer",
+          ROLE_ADMIN : "/admin",
           // Add more authority types and corresponding routes as needed
         };
 

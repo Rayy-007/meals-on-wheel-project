@@ -157,8 +157,6 @@ const Meals = () => {
     console.log(userLocation);
     if (!userLocation || !partnerLocation) return "0000";
 
-    const [latStr, lonStr] = partnerLocation.split(","); // Assuming the delimiter is a comma
-
     const R = 6371; // Earth radius in kilometers
     const lat1 = userLocation.lat();
     const lon1 = userLocation.lng();

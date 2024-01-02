@@ -35,18 +35,18 @@
 }
 
 .meals-con .meal .des ul {
-  padding: 0.5rem 0 2rem 1.4rem;
+  /* padding: 0.5rem 0 2rem 1.4rem; */
+  padding: 1rem 0;
 }
 
 .meals-con .meal .des ul li {
-  list-style: decimal;
   padding: 5px;
 }
 
 .meals-con .badge {
   position: absolute;
-  top: 27%;
-  right: 10%;
+  top: 43%;
+  right: 7%;
   background-color: var(--secondary-color);
   color: var(--white-color);
   font-size: 15px;
@@ -55,7 +55,28 @@
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
+.meals-con .badge.badge-hot,
+.meals-con .badge.badge-frozen {
+  top: 0%;
+  left: 8%;
+  text-align: center;
+}
+
+.meals-con .badge.badge-hot {
+  background-color: var(--primary-color);
+}
+
+.meals-con .badge.badge-frozen {
+  background-color: var(--btn-primary-color);
+}
+
 /* Frozen meals */
 .frozenmeal-con .meals-con .meal {
   background-color: rgba(76, 175, 80, 40%);
+}
+
+u {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  font-size: 14px;
 }

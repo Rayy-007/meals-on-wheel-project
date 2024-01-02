@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../login/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const MealForm = () => {
+  const navigate = useNavigate();
+
   const { user } = useAuth();
   const [file, setFile] = useState(null);
   const [mealName, setMealName] = useState("");
@@ -42,6 +45,9 @@ const MealForm = () => {
           },
         }
       );
+
+      alert("Meal is Uploaded Successfully!");
+      navigate("/user/partner");
 
       console.log("Response:", response.data);
       // Handle the response accordingly

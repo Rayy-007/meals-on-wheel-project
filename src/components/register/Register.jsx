@@ -83,6 +83,14 @@ const Register = () => {
                   Join As Caregiver
                   <img className="logo-reg-btn" src={DonateIcon} />
                 </NavLink>
+                <NavLink
+                  onClick={changeLoading}
+                  className="btn btn-flex green"
+                  to="rider"
+                >
+                  Join As Rider
+                  <img className="logo-reg-btn" src={DonateIcon} />
+                </NavLink>
                 <p>
                   Already have an account?
                   <a href="/login" className="text-orange">

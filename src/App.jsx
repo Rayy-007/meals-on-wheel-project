@@ -41,6 +41,8 @@ import { caregiveData } from "./dataFetch/caregiverData";
 
 import MealForm from "./components/management/partner/MealUpload.jsx";
 import { createContext } from "react";
+import RegisterRider from "./components/register/RegisterRider.jsx";
+import { riderData } from "./dataFetch/riderData.js";
 //import { memberData } from "./dataFetch/memberData";
 
 function App() {
@@ -62,6 +64,10 @@ function App() {
   const onHandleRegisterCaregiver = (data) => {
     //caregiverData (cargiverData.js)
     caregiveData(data);
+  };
+  const onHandleRegisterRider = (data) => {
+    //caregiverData (cargiverData.js)
+    riderData(data);
   };
 
   return (
@@ -105,6 +111,14 @@ function App() {
                 element={
                   <RegisterCareGiver
                     onHandleRegisterCaregiver={onHandleRegisterCaregiver}
+                  />
+                }
+              />
+              <Route
+                path="rider"
+                element={
+                  <RegisterRider
+                    onHandleRegisterRider={onHandleRegisterRider}
                   />
                 }
               />

@@ -16,6 +16,13 @@ import { useAuth } from "../../login/AuthContext";
 import MealService from "../../management/admin/service/MealService";
 
 const Meals = () => {
+  const [userDistanceKilo, setUserDistanceKilo] = useState(0);
+  const [alreadyOrder, setAlreadyOrder] = useState(3);
+
+  // useEffect(() => {
+  //   alert(userDistanceKilo);
+  // }, [userDistanceKilo]);
+
   const [meals, setMeals] = useState([]);
   const { user } = useAuth();
   const [userLocation, setUserLocation] = useState(null);
@@ -47,6 +54,11 @@ const Meals = () => {
       )
       .then((res) => {
         console.log("Order created:", res.data);
+        setAlreadyOrder((pre) => pre - 1);
+        alert("Orderd Meal Successfully!" + alreadyOrder);
+        if (alreadyOrder === 0) {
+          alert("You can only order 3 meals!");
+        }
         // Optionally, you can update the state or show a success message to the user
       })
       .catch((error) => {
@@ -136,17 +148,30 @@ const Meals = () => {
           alt={meal.mealName}
         />
         <div className="des">
-          <h3>Meal Name : {meal.mealName}</h3>
-          <h3>Meal Desc : {meal.mealDesc}</h3>
-          <h3>Partner Name : {meal.partner.companyName}</h3>
+          <h3>{meal.mealName}</h3>
+          <ul>
+            <li>Meal Desc : {meal.mealDesc}</li>
+            <li>
+              Partner Name : <b>{meal.partner.companyName}</b>
+            </li>
+            <li>
+              <u>Detail</u>
+            </li>
+          </ul>
           <br />
-          <a
+          <button
             className="btn primary blue"
             onClick={() => handleOrderClick(meal.id)}
+            disabled={alreadyOrder === 0 ? true : false}
           >
             Order Now
-          </a>
+          </button>
           <b className="badge">Healthy</b>
+          {userDistanceKilo < 10 ? (
+            <b className="badge  badge-hot">Hot Meal</b>
+          ) : (
+            <b className="badge  badge-frozen">Frozen Meal</b>
+          )}
         </div>
       </div>
     );
@@ -187,23 +212,38 @@ const Meals = () => {
   };
 
   return (
-    <div className="container meals">
-      <MapComponent onUserLocationChange={handleUserLocationChange} />
-      <h2>Available meals for today</h2>
-      <section className="meal hotmeal-con">
-        <h3 className="text-orange">Hot Meals</h3>
-        <div className="meals-con flex">{databaseMeal}</div>
-      </section>
+    <>
+      <MapComponent
+        setUserDistanceKilo={setUserDistanceKilo}
+        onUserLocationChange={handleUserLocationChange}
+      />
+      {!userDistanceKilo ? (
+        <div> Loading....</div>
+      ) : (
+        <div className="container meals">
+          <h3>
+            Your location is <span>{userDistanceKilo} Kilometers </span>
+            that is far from our partner!
+          </h3>
+          <p>So, You can only get Forzen meals</p>
 
-      <section className="meal hotmeal-con">
-        <div className="meals-con flex">{disableHot}</div>
-      </section>
+          <section className="meal hotmeal-con">
+            <h3 className="text-orange">Available meals for today</h3>
+            {/* <h3>Hot Meals</h3> */}
+            <div className="meals-con flex">{databaseMeal}</div>
+          </section>
 
-      <section className="meal hotmeal-con frozenmeal-con">
-        <h3 className="text-violet ">Frozen Meals</h3>
-        <div className="meals-con flex">{FrozenMeals}</div>
-      </section>
-    </div>
+          {/* <section className="meal hotmeal-con">
+      </section> */}
+
+          {/* <div className="meals-con flex">{disableHot}</div> */}
+          {/* <section className="meal hotmeal-con frozenmeal-con">
+            <h3 className="text-violet ">Frozen Meals</h3>
+            <div className="meals-con flex">{FrozenMeals}</div>
+          </section> */}
+        </div>
+      )}
+    </>
   );
 };
 

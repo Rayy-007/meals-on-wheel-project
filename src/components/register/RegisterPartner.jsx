@@ -50,7 +50,7 @@ const RegisterPartner = ({ onHandleRegisterPartner }) => {
           value={formData.username}
           placeholder="Enter name who Own your Org.."
           onChange={handleInputChange}
-          required
+          require
         />
         <input
           type="text"

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const MapComponent = ({onUserLocationChange}) => {
+const MapComponent = ({ setUserDistanceKilo, onUserLocationChange }) => {
   const [userLocation, setUserLocation] = useState(null);
   const [distanceTanta, setdistance] = useState(null);
-  
 
   useEffect(() => {
     const loadGoogleMapsScript = () => {
@@ -39,8 +38,11 @@ const MapComponent = ({onUserLocationChange}) => {
       });
 
       const officeLocation = new window.google.maps.LatLng(
-        21.970809395846643,
-        96.0972625214997
+        // 16.83162046225846,
+        // 96.13742771537034 this is ygn
+
+        21.966567256695363,
+        96.05978223029763
       );
 
       const tantaLocation = new window.google.maps.LatLng(
@@ -86,8 +88,18 @@ const MapComponent = ({onUserLocationChange}) => {
                 tantaLocation,
                 userLatlng
               );
-              onUserLocationChange(userLatlng);
-           
+            onUserLocationChange(userLatlng);
+            setUserDistanceKilo(
+              (distanceToOffice.toFixed(2) / 1000).toFixed(2)
+            );
+            // alert(
+            //   "Distance from Tanta: " +
+            //     distanceToTanta.toFixed(2) +
+            //     " meters" +
+            //     "Distance from Office: " +
+            //     distanceToOffice.toFixed(2) +
+            //     " meters"
+            // );
           },
           (error) => {
             console.error("Error getting user location:", error);
@@ -116,8 +128,7 @@ const MapComponent = ({onUserLocationChange}) => {
     };
   }, []);
 
-  return <div id="map" style={{ height: "400px" }}></div>;
+  return <div id="map" style={{ height: "0px" }}></div>;
 };
-
 
 export default MapComponent;

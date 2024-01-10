@@ -225,22 +225,17 @@ const Meals = () => {
             Your location is <span>{userDistanceKilo} Kilometers </span>
             that is far from our partner!
           </h3>
-          <p>So, You can only get Forzen meals</p>
+          {userDistanceKilo < 10 ? (
+            <p>So, You can only get Hot meals</p>
+          ) : (
+            <p>So, You can only get Forzen meals</p>
+          )}
 
           <section className="meal hotmeal-con">
             <h3 className="text-orange">Available meals for today</h3>
-            {/* <h3>Hot Meals</h3> */}
+
             <div className="meals-con flex">{databaseMeal}</div>
           </section>
-
-          {/* <section className="meal hotmeal-con">
-      </section> */}
-
-          {/* <div className="meals-con flex">{disableHot}</div> */}
-          {/* <section className="meal hotmeal-con frozenmeal-con">
-            <h3 className="text-violet ">Frozen Meals</h3>
-            <div className="meals-con flex">{FrozenMeals}</div>
-          </section> */}
         </div>
       )}
     </>

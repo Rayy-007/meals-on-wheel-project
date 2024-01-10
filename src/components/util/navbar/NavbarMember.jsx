@@ -69,7 +69,7 @@ const NavbarMember = ({ logout }) => {
           <li>
             <NavLink
               style={({ isActive }) => (isActive ? activeStyle : null)}
-              to="/register"
+              to="/user/meals"
             >
               Get Meal
             </NavLink>

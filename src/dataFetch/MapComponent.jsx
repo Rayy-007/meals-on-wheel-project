@@ -38,8 +38,9 @@ const MapComponent = ({ setUserDistanceKilo, onUserLocationChange }) => {
       });
 
       const officeLocation = new window.google.maps.LatLng(
+        //this is ygn
         // 16.83162046225846,
-        // 96.13742771537034 this is ygn
+        // 96.13742771537034
 
         21.966567256695363,
         96.05978223029763

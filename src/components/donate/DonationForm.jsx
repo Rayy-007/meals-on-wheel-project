@@ -15,7 +15,7 @@ const DonationForm = () => {
         style={{
           minWidth: "100%",
           maxWidth: "100%",
-          height: "539px",
+          height: "1200px",
           border: "none",
         }}
         scrolling="yes"
